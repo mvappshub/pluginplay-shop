@@ -1,0 +1,19 @@
+/* src/components/CardGrid.css */
+.card-grid {
+
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    align-content: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+ 
+
+  /* Center cards vertically */
+
+
+ 

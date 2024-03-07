@@ -1,0 +1,122 @@
+/**
+ * Card component styles
+ *
+ * Defines CSS styles for a card component with image, details, tags, etc.  
+ * Includes hover animations, layout, sizing, colors, and typography.
+ */
+/* src/components/Card.css */
+.card {
+  background: #282728;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(255, 250, 250, 0.865);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  width: 100%; /* Karta zabere 100% šířky sloupce */
+  margin: 0.5rem; /* Upravte margin pro vhodné rozestupy */
+  min-height: 400px; /* Minimální výška pro konzistenci */
+  max-width: 350px; /* Maximální šířka karty */
+  display: flex; /* Přidáno pro flex layout */
+  flex-direction: column; /* Přidáno pro vertikální uspořádání */
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(37, 246, 141, 0.496);
+}
+
+.card-image-container {
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: auto;
+  max-height: 200px;
+}
+
+.card-image-container img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-details {
+  padding: 20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-developer {
+  font-size: 0.8em;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.card-category {
+  display: block;
+  background: #444;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.card-tags-container {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.card-tag {
+  display: inline-block;
+  background: #eeaf40;
+  color: #0f0f0f;
+  margin-right: 5px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card-tag:hover {
+  background: #f9f9f9;
+}
+
+.card-description {
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #222;
+}
+
+.card-price {
+  font-size: 1.25em;
+  font-weight: bold;
+}

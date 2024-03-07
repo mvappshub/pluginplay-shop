@@ -1,0 +1,45 @@
+{
+  "name": "proshop-v3",
+  "version": "3.0.0",
+  "description": "MERN",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+ 
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "install:root": "npm install",
+    "install:frontend": "cd frontend && npm install",
+    "install:all": "npm run install:root && npm run install:frontend"
+  
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvappshub/proshop-v3.git"
+  },
+  "author": "Martin Vosahlo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mvappshub/proshop-v3/issues"
+  },
+  "homepage": "https://github.com/mvappshub/proshop-v3#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.1.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.3.2",
+    "nodemon": "^3.0.3"
+  }
+}

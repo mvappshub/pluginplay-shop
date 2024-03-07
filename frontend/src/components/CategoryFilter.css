@@ -1,0 +1,42 @@
+/* src/components/CategoryFilter.css */
+.category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrování položek */
+    gap: 10px; /* Mezery mezi položkami */
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .category-item {
+    flex: 1 1 calc(33.333% - 20px); /* Dynamická velikost s výpočtem mezery */
+    cursor: pointer;
+    background-color: #282728; /* Základní barva */
+    color: #d3d3d3; /* Barva písma */
+    font-size: 1rem; /* Velikost písma */
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #fff;
+    border-radius: 10px; /* Zaoblené rohy */
+    text-align: center;
+    transition: all 0.3s; /* Plynulý přechod pro všechny vlastnosti */
+  }
+  
+  .category-item.selected {
+    color: rgba(37, 246, 141, 0.8); /* Světlá barva písma pro zvýraznění vybrané kategorie */
+    background-color: transparent; /* Průhledné pozadí */
+    box-shadow: 0 0 10px rgba(37, 246, 141, 0.5) inset; /* Zelený nádech světla prosvítajícího textem */
+  }
+  
+  /* Hover efekt pouze pro nevybrané položky */
+  .category-item:not(.selected):hover {
+    background-color: #3a3b3c; /* Tmavší barva při najetí myší */
+  }
+  
+  /* Responsivní úpravy pro menší obrazovky */
+  @media (max-width: 600px) {
+    .category-item {
+      flex-basis: 100%; /* Na malých obrazovkách na celou šířku */
+    }
+  }
+  
